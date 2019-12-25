@@ -1,7 +1,7 @@
 ﻿#include <Siv3D.hpp> // OpenSiv3D v0.4.2
 #include "BrowserRect.hpp"
 
-void Main2()
+void Main()
 {
 	Window::Resize(1280, 720);
 	Scene::SetBackground(ColorF(0.8, 0.9, 1.0));
