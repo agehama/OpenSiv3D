@@ -23,6 +23,7 @@
 #	pragma comment (lib, "ws2_32")
 #	pragma comment (lib, "strmiids")
 #	pragma comment (lib, "SetupAPI")
+#	pragma comment (lib, "Usp10")
 
 #	if SIV3D_BUILD_TYPE(DEBUG)
 

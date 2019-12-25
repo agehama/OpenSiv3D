@@ -1072,6 +1072,24 @@
     <Filter Include="src\Siv3D\Serial">
       <UniqueIdentifier>{8bb19ef2-cfc7-4bbe-921a-9c27dbd81adf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\ThirdParty\UltralightSDK">
+      <UniqueIdentifier>{5fba1e52-bf41-4804-98b3-5df86dd521a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ThirdParty\UltralightSDK\AppCore">
+      <UniqueIdentifier>{dc965cc3-cac0-4fd1-838b-754f35f9fee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ThirdParty\UltralightSDK\AppCore\src">
+      <UniqueIdentifier>{92964d2e-a668-4e57-9cb6-7a0efd582571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ThirdParty\UltralightSDK\AppCore\src\common">
+      <UniqueIdentifier>{632c2f99-6cea-49f1-b98f-e61c8f061845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ThirdParty\UltralightSDK\AppCore\src\win">
+      <UniqueIdentifier>{80efdb74-407a-42e4-a955-611701d5dde6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ThirdParty\UltralightSDK\AppCore\src\win\d3d11">
+      <UniqueIdentifier>{12ef78cf-a0dc-407a-8aa2-1cda0a41fa64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Siv3D\include\Siv3D.hpp">
@@ -5458,6 +5476,42 @@
     </ClCompile>
     <ClCompile Include="..\Siv3D\src\Siv3D\Serial\SerialDetail.cpp">
       <Filter>src\Siv3D\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\common\Overlay.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\common\OverlayManager.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\common\CAPI.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\common\JSHelpers.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\FontLoaderWin.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\MonitorWin.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\WindowsUtil.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\WindowWin.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\AppWin.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\FileSystemWin.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\d3d11\GPUDriverD3D11.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win\d3d11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Siv3D\src\ThirdParty\UltralightSDK\AppCore\src\win\d3d11\GPUContextD3D11.cpp">
+      <Filter>src\ThirdParty\UltralightSDK\AppCore\src\win\d3d11</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

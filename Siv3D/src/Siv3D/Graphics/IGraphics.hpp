@@ -12,6 +12,13 @@
 # pragma once
 # include <Siv3D/Fwd.hpp>
 
+# if SIV3D_PLATFORM(WINDOWS)
+struct ID3D11Device;
+struct ID3D11DeviceContext;
+struct IDXGISwapChain;
+struct ID3D11RenderTargetView;
+# endif
+
 namespace s3d
 {
 	class ISiv3DGraphics
@@ -61,5 +68,17 @@ namespace s3d
 		virtual void requestScreenCapture() = 0;
 
 		virtual const Image& getScreenCapture() const = 0;
+
+# if SIV3D_PLATFORM(WINDOWS)
+
+		virtual ID3D11Device* getDevice() const = 0;
+
+		virtual ID3D11DeviceContext* getContext() const = 0;
+
+		virtual IDXGISwapChain* getSwapChain() const = 0;
+
+		virtual ID3D11RenderTargetView* getRenderTargetView() const = 0;
+
+# endif
 	};
 }

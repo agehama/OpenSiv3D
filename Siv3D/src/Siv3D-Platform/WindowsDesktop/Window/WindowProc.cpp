@@ -20,6 +20,14 @@
 # include <Mouse/CMouse.hpp>
 # include "CWindow.hpp"
 
+namespace ultralight
+{
+	extern std::mutex sivMutex;
+	extern UINT sivWindowMessage;
+	extern WPARAM sivWindowWParam;
+	extern LPARAM sivWindowLParam;
+}
+
 namespace s3d
 {
 	namespace detail
@@ -32,6 +40,15 @@ namespace s3d
 
 	LRESULT CALLBACK CWindow::WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	{
+		if(ultralight::sivMutex.try_lock())
+		{
+			ultralight::sivWindowMessage = message;
+			ultralight::sivWindowWParam = wParam;
+			ultralight::sivWindowLParam = lParam;
+
+			ultralight::sivMutex.unlock();
+		}
+
 		if (auto textinput = dynamic_cast<CTextInput*>(Siv3DEngine::Get<ISiv3DTextInput>()))
 		{
 			if (textinput->process(message, wParam, &lParam))

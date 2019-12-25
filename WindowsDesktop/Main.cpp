@@ -15,6 +15,7 @@ void Main()
 	// 猫の座標
 	Vec2 catPos(640, 450);
 
+	Camera2D camera;
 	while (System::Update())
 	{
 		// テキストを画面の中心に描く

@@ -89,9 +89,19 @@ namespace s3d
 
 		const Image& getScreenCapture() const override;
 
-		ID3D11Device* getDevice() const { return m_device->getDevice(); }
+		ID3D11Device* getDevice() const override { return m_device->getDevice(); }
 
-		ID3D11DeviceContext* getContext() const { return m_device->getContext(); }
+		ID3D11DeviceContext* getContext() const override { return m_device->getContext(); }
+
+		IDXGISwapChain* getSwapChain() const override { return m_swapChain->getSwapChain1(); }
+
+		ID3D11RenderTargetView* getRenderTargetView() const override
+		{
+			ID3D11RenderTargetView* pRTV = nullptr;
+			ID3D11DepthStencilView* pDSV = nullptr;
+			getContext()->OMGetRenderTargets(1, &pRTV, &pDSV);
+			return pRTV;
+		}
 
 		D3D11RenderTarget* getRenderTarget() const { return m_renderTarget.get(); }
 
